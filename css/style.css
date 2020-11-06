@@ -27,104 +27,77 @@ img {
     height: auto;
 }
 
-/*------------------------------------*\
-    #Pirkimo forma settings
-\*------------------------------------*/
-
-.buy-box {
-    height: 400px;
-    width: 400px;
-}
-
-.buy-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.buy-form input {
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.buy-button {
-    background-color: red;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    transition: .2s;
-    font-weight: bold;
-}
-
-.buy-button:hover {
-    cursor: pointer;
-    background-color: white;
-    color: red;
-    border: 2px solid red;
-}
 
 /*------------------------------------*\
-        Home page file
+    #HOME PAGE
 \*------------------------------------*/
+
+body {
+    background-color: black;
+    height: 100vh;
+}
 
 .home-logo {
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
+
+.home-main {
+    background-image: url('https://media.istockphoto.com/photos/full-red-lips-an-black-background-with-copy-space-picture-id1200185523?k=6&m=1200185523&s=612x612&w=0&h=eZTwYHU7iIDICqOZ_WBlHBFlUIesFIxOgrbC258xm18=');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home-description {
+    margin-left: 700px;
+    margin-right: 50px;
+    padding-top: 20px;
+}
+
+.home-info {
+    color: white;
+}
+
+.home-p {
+    line-height: 2;
+    font-size: 12px;
+}
+
+.home-h4 {
+    padding: 15px 0;
+}
+
+.home-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.home-img {
+    padding: 20px 0;
+}
+
 .nav-wrapper {
     width: 80%;
     margin: 0 auto;
 }
+
 .header {
     background-color: black;
 }
+
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-links {
     color: #ba0720;
     font-size: 20px;
-}
-
-/*------------------------------------*\
-        Katalogas page file
-\*------------------------------------*/
-
-.catalog,
-.catalog-main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 1000px;
-    margin: 0 auto;
-}
-.catalog-product-img {
-    width: 200px;
-    object-fit: cover;
-    margin: 10px;
-}
-.catalog-product-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid salmon;
-    padding: 5px;
-    margin: 5px;
-    align-items: center;
-}
-.catalog-product-number{
-    font-weight: bolder;
-    font-size: medium;
-}
-.style-1{
-    width: 300px;
-}
-.style-2{
-    width: 400px;
-}
-.style-3{
-    width: 100px;
 }
 
 /*------------------------------------*\
@@ -188,4 +161,137 @@ img {
 }
 .size-3{
     width: 100%;
+}
+
+/*------------------------------------*\
+     Nusiskundimai-page style
+\*------------------------------------*/
+
+.nusiskundimai-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nusiskundimai-page-bg {
+    width: 100%;
+    height: 80%;
+    background-image: url("https://hdwallsource.com/img/2014/11/erotic-wallpaper-25358-26040-hd-wallpapers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nusiskundimai-title {
+    font-size: 50px;
+    color: white;
+    margin: 50px 0;
+}
+
+.nusiskundimai-form-container {
+    position: relative;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.nusiskundimai-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.nusiskundimai-form-input {
+    outline: none;
+    padding: 20px 10px;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.nusiskundimai-form-textarea {
+    resize: none;
+    outline: none;
+    height: 300px;
+    margin-top: 20px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.nusiskundimai-alert {
+    display: block;
+    color: #ba0720;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.nusiskundimai-form-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nusiskundimai-form-button {
+    font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+    padding: 20px;
+    margin-top: 20px;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.7s;
+}
+
+.nusiskundimai-form-button:hover {
+    transition: 0.7s;
+    transform: translateY(4px);
+    cursor: pointer;
+    background-color: #ba0720;
+    color: white;
+}
+
+.nusiskundimai-display-none {
+    display: none;
+}
+
+.nusiskundimai-display-flex {
+    display: flex;
+}
+
+.nusiskundimai-text-container {
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nusiskundimai-ty-text {
+    font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.nusiskundimai-text {
+    font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+    color: white;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.nusiskundimai-gif {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    background-image: url("https://bestanimations.com/media/hot-women/1631297575hot-girl-animated-gif-28.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
