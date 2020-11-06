@@ -58,12 +58,12 @@ if (isset($_POST['submit'])) {
     <title>Surprise</title>
 </head>
 
-<body>
+<body class="sur-main-bg">
     <header class="header">
         <nav class="nav-wrapper">
             <ul class="nav">
-                <li><img class="home-logo" src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/Erotic-Logo.jpg" alt="home"><a class="nav-links" href=""></a></li>
-                <li><a class="nav-links" href="index.php">Katalogas</a></li>
+                <li><a class="nav-links" href="index.php"><img class="home-logo" src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/Erotic-Logo.jpg" alt="home"></a></li>
+                <li><a class="nav-links" href="katalogas.php">Katalogas</a></li>
                 <li><a class="nav-links" href="surprise.php">Nustebink mane</a></li>
                 <li><a class="nav-links" href="nusiskundimai.php">Nusiskundimai</a></li>
             </ul>

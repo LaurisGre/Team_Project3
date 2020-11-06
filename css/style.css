@@ -88,7 +88,6 @@ body {
     background-color: black;
 }
 
-
 .nav {
     display: flex;
     justify-content: space-between;
@@ -101,9 +100,95 @@ body {
 }
 
 /*------------------------------------*\
+        Katalogas page file
+\*------------------------------------*/
+
+.catalog,
+.catalog-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.catalog-main-bg {
+    background-image: url('https://img.freepik.com/free-photo/set-various-adult-sex-toys-black-silk_137321-218.jpg?size=626&ext=jpg');
+}
+
+.catalog-product-img {
+    width: 200px;
+    object-fit: cover;
+    margin: 10px;
+}
+.catalog-product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid salmon;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+}
+.catalog-product-number{
+    font-weight: bolder;
+    font-size: medium;
+    color: white;
+}
+.style-1{
+    width: 300px;
+}
+.style-2{
+    width: 400px;
+}
+.style-3{
+    width: 500px;
+}
+
+/*------------------------------------*\
+    #Pirkimo forma settings
+\*------------------------------------*/
+
+.buy-box {
+    text-align: center;
+    width: 500px;
+    margin: 10px;
+}
+
+.buy-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.buy-form input {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.buy-button {
+    background-color: red;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: .2s;
+    font-weight: bold;
+}
+
+.buy-button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+
+/*------------------------------------*\
     #Surprise settings
 \*------------------------------------*/
- 
+
+.sur-main-bg{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTn5-kyychdmPrS0KN_jAynvOM5Ln1ywFSiNA&usqp=CAU');
+} 
+
 .surprise-box {
     width: 600px;
     margin: 0 auto;
