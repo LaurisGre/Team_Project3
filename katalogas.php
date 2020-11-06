@@ -33,6 +33,17 @@ $catalog = [
         'photo' => 'https://external-preview.redd.it/6MNYmhB5VTRxRoy614EpLXV_ksijlZhIyqJW0M2_hws.jpg?auto=webp&s=ea2f7674c7b687a022b22d10964aed77684c7d7d',
     ],
 ];
+
+$show_buy_form = true;
+$bought_item = [];
+
+if(isset($_POST['submit'])) {
+    $show_buy_form = false;
+    $bought_item['ID'] = $_POST['item_ID'];
+    $bought_item['name'] = $product[$_POST['item_ID']]['name'];
+    $bought_item['photo'] = $product[$_POST['item_ID']]['photo'];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,6 +73,26 @@ $catalog = [
                 </div>
             <?php endforeach; ?>
         </section>
+        <section class="buy_box">
+            <?php if ($show_buy_form) : ?>
+                <h3>Pirkti!</h3>
+                <form class="buy_form" method="POST">
+                    <input type="number" name="item_ID" required>
+                    <input type="number" name="item_size" required>
+                    <input class="buy_button" type="submit" name="submit">
+                </form>
+            <?php else : ?>
+                <div class="catalog-product-card">
+                    <h3><?php print $bought_item['name']; ?></h3>
+                    <img
+                        class="catalog-product-img"
+                        src="<?php print $bought_item['photo']; ?>"
+                        alt="photo"
+                    >
+                    <p><?php print $bought_item['ID']; ?></p>
+                </div>
+            <?php endif; ?>
+            </section>
     
     </main>
     
