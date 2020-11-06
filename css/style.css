@@ -26,6 +26,32 @@ img {
     width: 100%;
     height: auto;
 }
+
+/*------------------------------------*\
+        Home page file
+\*------------------------------------*/
+
+.home-logo {
+    width: 100px;
+    height: 100px;
+}
+.nav-wrapper {
+width: 80%;
+margin: 0 auto;
+}
+.header {
+background-color: black;
+}
+.nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.nav-links {
+color: #ba0720;
+font-size: 20px;
+}
+
 /*------------------------------------*\
         Katalogas page file
 \*------------------------------------*/
@@ -54,3 +80,4 @@ img {
     font-weight: bolder;
     font-size: medium;
 }
+
