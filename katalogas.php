@@ -77,24 +77,27 @@ if(isset($_POST['submit'])) {
             <?php if ($show_buy_form) : ?>
                 <h3>Pirkti!</h3>
                 <form class="buy_form" method="POST">
-                    <input type="number" name="item_ID" required>
-                    <input type="number" name="item_size" required>
+                    <input type="number" name="item_ID" placeholder="Rinkis prekę"required>
+                        <select name="item_size" id="item_size">
+                            <option value="" disabled selected>Pasirink dydį</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="1">3</option>
+                         </select>
                     <input class="buy_button" type="submit" name="submit">
                 </form>
             <?php else : ?>
                 <div class="catalog-product-card">
                     <h3><?php print $bought_item['name']; ?></h3>
                     <img
-                        class="catalog-product-img"
+                        class="catalog-product-img style-<?php print $_POST['item_size'];?>"
                         src="<?php print $bought_item['photo']; ?>"
                         alt="photo"
                     >
-                    <p><?php print $bought_item_id; ?></p>
                 </div>
             <?php endif; ?>
             </section>
     
     </main>
-    
 </body>
 </html>
