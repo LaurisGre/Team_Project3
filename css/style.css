@@ -25,7 +25,8 @@ img {
     width: 100%;
     height: auto;
 }
-body{
+
+body {
     background-color: black;
     height: 100vh;
 }
@@ -78,6 +79,7 @@ body{
 }
 
 .nusiskundimai-form-container {
+    position: relative;
     display: flex;
     width: 50%;
     justify-content: center;
@@ -115,11 +117,19 @@ input[type=number]::-webkit-outer-spin-button {
     border: 2px solid white;
     font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
 }
+.nusiskundimai-alert{
+    display: block;
+    color: #ba0720;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
 
 .nusiskundimai-form-button-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .nusiskundimai-form-button {
@@ -148,18 +158,33 @@ input[type=number]::-webkit-outer-spin-button {
 .nusiskundimai-display-flex {
     display: flex;
 }
-.nusiskundimai-text-container{
+
+.nusiskundimai-text-container {
     width: 80%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.nusiskundimai-ty-text{
+
+.nusiskundimai-ty-text {
     font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
     color: white;
     font-size: 25px;
 }
-.nusiskundimai-text{
+
+.nusiskundimai-text {
     font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
     color: white;
     font-size: 15px;
     margin-top: 50px;
+}
+
+.nusiskundimai-gif {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    background-image: url("https://bestanimations.com/media/hot-women/1631297575hot-girl-animated-gif-28.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
 }

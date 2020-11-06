@@ -1,16 +1,25 @@
 <?php
 $h1 = 'NUSISKUNDIMAI';
-if (empty($_POST)) {
+$alert= '';
+if (isset($_POST['submit'])) {
+    $tank_you = '';
+    $name = '';
+    $tekstas = '';
+    if ($_POST['age'] >= 18) {
+        $name = $_POST['vardas'];
+        $tank_you = "Jūsų skundas priimtas, dėkojame už pastabas pasistenksime patobulėti arba NE";
+        $text = 'nusiskundimai-display-flex';
+        $form = 'nusiskundimai-display-none';
+        $tekstas = $_POST['text'];
+    } else {
+        $alert = "Esi per jaunas, bek gert pieno";
+        $text = 'nusiskundimai-display-none';
+        $form = 'nusiskundimai-display-flex';
+    }
+} else {
     $text = 'nusiskundimai-display-none';
     $form = 'nusiskundimai-display-flex';
-} else {
-    $name = $_POST['vardas'];
-    $tank_you = "Jūsų skundas priimtas, dėkojame už pastabas pasistenksime patobulėti arba NE";
-
-    $text = 'nusiskundimai-display-flex';
-    $form = 'nusiskundimai-display-none';
 }
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -44,15 +53,17 @@ if (empty($_POST)) {
                 <input class="nusiskundimai-form-input" type="number" name="age" placeholder="Jūsų amžius" required>
                 <textarea class="nusiskundimai-form-textarea" name="text" placeholder="Jūsų skundas"></textarea>
                 <div class="nusiskundimai-form-button-container">
-                    <button class="nusiskundimai-form-button" type="submit">Siusti</button>
+                    <p class="nusiskundimai-alert"><?php print $alert?></p>
+                    <button class="nusiskundimai-form-button" name="submit" type="submit">Siusti</button>
                 </div>
             </form>
         </section>
         <section class="nusiskundimai-text-container <?php print $text ?>">
             <h2 class="nusiskundimai-ty-text"><?php print $tank_you ?></h2>
-            <p class="nusiskundimai-text">Jūsų išsiūstas tekstas:<br> <?php print $_POST['text'] ?></p>
+            <p class="nusiskundimai-text"><?php print $tekstas ?></p>
         </section>
     </article>
+    <div class="nusiskundimai-gif"></div>
 </main>
 </body>
 </html>
