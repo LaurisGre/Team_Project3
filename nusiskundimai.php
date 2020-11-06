@@ -1,18 +1,18 @@
 <?php
 $h1 = 'NUSISKUNDIMAI';
-$alert= '';
+$alert = '';
 if (isset($_POST['submit'])) {
     $tank_you = '';
     $name = '';
     $tekstas = '';
-    if ($_POST['age'] >= 18) {
-        $name = $_POST['vardas'];
+    if ($_POST['age'] >= 18 && $_POST['name'] !== '') {
+        $name = $_POST['name'];
         $tank_you = "Jūsų skundas priimtas, dėkojame už pastabas pasistenksime patobulėti arba NE";
         $text = 'nusiskundimai-display-flex';
         $form = 'nusiskundimai-display-none';
         $tekstas = $_POST['text'];
     } else {
-        $alert = "Esi per jaunas, bek gert pieno";
+        $alert = "Esi per jaunas, bek gert pieno arba laukai yra tušti";
         $text = 'nusiskundimai-display-none';
         $form = 'nusiskundimai-display-flex';
     }
@@ -20,6 +20,8 @@ if (isset($_POST['submit'])) {
     $text = 'nusiskundimai-display-none';
     $form = 'nusiskundimai-display-flex';
 }
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -49,11 +51,11 @@ if (isset($_POST['submit'])) {
         <h1 class="nusiskundimai-title"><?php print $h1 ?></h1>
         <section class="nusiskundimai-form-container <?php print $form ?>">
             <form class="nusiskundimai-form" method="POST">
-                <input class="nusiskundimai-form-input" type="text" name="vardas" placeholder="Jūsų vardas" required>
-                <input class="nusiskundimai-form-input" type="number" name="age" placeholder="Jūsų amžius" required>
+                <input class="nusiskundimai-form-input" type="text" name="name" placeholder="Jūsų vardas">
+                <input class="nusiskundimai-form-input" type="number" name="age" placeholder="Jūsų amžius" >
                 <textarea class="nusiskundimai-form-textarea" name="text" placeholder="Jūsų skundas"></textarea>
                 <div class="nusiskundimai-form-button-container">
-                    <p class="nusiskundimai-alert"><?php print $alert?></p>
+                    <p class="nusiskundimai-alert"><?php print $alert ?></p>
                     <button class="nusiskundimai-form-button" name="submit" type="submit">Siusti</button>
                 </div>
             </form>
