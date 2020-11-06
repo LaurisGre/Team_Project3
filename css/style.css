@@ -96,23 +96,23 @@ font-size: 20px;
     #Pirkimo forma settings
 \*------------------------------------*/
 
-.buy_box {
+.buy-box {
     text-align: center;
     width: 500px;
     margin: 10px;
 }
 
-.buy_form {
+.buy-form {
     display: flex;
     flex-direction: column;
 }
 
-.buy_form input {
+.buy-form input {
     padding: 10px;
     margin: 10px 0;
 }
 
-.buy_button {
+.buy-button {
     background-color: red;
     color: white;
     border: 2px solid transparent;
@@ -121,10 +121,11 @@ font-size: 20px;
     font-weight: bold;
 }
 
-.buy_button:hover {
+.buy-button:hover {
     cursor: pointer;
     background-color: white;
     color: red;
     border: 2px solid red;
 }
+
 
