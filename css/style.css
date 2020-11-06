@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    #Default settings
+\*------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 10px;
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*------------------------------------*\
+
+
+#HOME PAGE
+
+
+\*------------------------------------*/
+
+.home-logo {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.nav-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    color: #ba0720;
+    font-size: 20px;
+}
+
+.home-main {
+    background-image: url('https://media.istockphoto.com/photos/full-red-lips-an-black-background-with-copy-space-picture-id1200185523?k=6&m=1200185523&s=612x612&w=0&h=eZTwYHU7iIDICqOZ_WBlHBFlUIesFIxOgrbC258xm18=');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home-description {
+    margin-left: 700px;
+    margin-right: 50px;
+    padding-top: 20px;
+}
+
+.home-info {
+    color: white;
+}
+
+.home-p {
+    line-height: 2;
+    font-size: 12px;
+}
+
+.home-h4 {
+    padding: 15px 0;
+}
+
+.home-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.home-img {
+    padding: 20px 0;
+}
+
