@@ -55,6 +55,7 @@ font-size: 20px;
 /*------------------------------------*\
         Katalogas page file
 \*------------------------------------*/
+
 .catalog {
     display: flex;
     justify-content: center;
@@ -79,6 +80,15 @@ font-size: 20px;
 .catalog-product-number{
     font-weight: bolder;
     font-size: medium;
+}
+.style-1{
+    width: 300px;
+}
+.style-2{
+    width: 400px;
+}
+.style-3{
+    width: 500px;
 }
 
 /*------------------------------------*\
@@ -115,3 +125,4 @@ font-size: 20px;
     color: red;
     border: 2px solid red;
 }
+
