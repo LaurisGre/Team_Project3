@@ -56,7 +56,8 @@ font-size: 20px;
         Katalogas page file
 \*------------------------------------*/
 
-.catalog {
+.catalog,
+.catalog-main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -75,7 +76,7 @@ font-size: 20px;
     border: 1px solid salmon;
     padding: 5px;
     margin: 5px;
-    text-align: center;
+    align-items: center;
 }
 .catalog-product-number{
     font-weight: bolder;
@@ -96,8 +97,9 @@ font-size: 20px;
 \*------------------------------------*/
 
 .buy_box {
-    height: 400px;
-    width: 400px;
+    text-align: center;
+    width: 500px;
+    margin: 10px;
 }
 
 .buy_form {
