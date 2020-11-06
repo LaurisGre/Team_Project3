@@ -1,6 +1,7 @@
 <?php
 $h1 = 'NUSISKUNDIMAI';
 $alert = '';
+
 if (isset($_POST['submit'])) {
     $tank_you = '';
     $name = '';
@@ -48,21 +49,21 @@ if (isset($_POST['submit'])) {
 </header>
 <main class="nusiskundimai-page-bg">
     <article class="nusiskundimai-wrapper">
-        <h1 class="nusiskundimai-title"><?php print $h1 ?></h1>
-        <section class="nusiskundimai-form-container <?php print $form ?>">
+        <h1 class="nusiskundimai-title"><?php print $h1; ?></h1>
+        <section class="nusiskundimai-form-container <?php print $form; ?>">
             <form class="nusiskundimai-form" method="POST">
                 <input class="nusiskundimai-form-input" type="text" name="name" placeholder="Jūsų vardas">
                 <input class="nusiskundimai-form-input" type="number" name="age" placeholder="Jūsų amžius">
                 <textarea class="nusiskundimai-form-textarea" name="text" placeholder="Jūsų skundas"></textarea>
                 <div class="nusiskundimai-form-button-container">
-                    <p class="nusiskundimai-alert"><?php print $alert ?></p>
+                    <p class="nusiskundimai-alert"><?php print $alert; ?></p>
                     <button class="nusiskundimai-form-button" name="submit" type="submit">Siusti</button>
                 </div>
             </form>
         </section>
-        <section class="nusiskundimai-text-container <?php print $text ?>">
-            <h2 class="nusiskundimai-ty-text"><?php print $tank_you ?></h2>
-            <p class="nusiskundimai-text"><?php print $tekstas ?></p>
+        <section class="nusiskundimai-text-container <?php print $text; ?>">
+            <h2 class="nusiskundimai-ty-text"><?php print $tank_you; ?></h2>
+            <p class="nusiskundimai-text"><?php print $tekstas; ?></p>
         </section>
     </article>
     <div class="nusiskundimai-gif"></div>
