@@ -49,7 +49,7 @@ if(isset($_POST['submit'])) {
             $error = 'Palikti tušti laukai';
         }
    }
-   if (($_POST['item_ID'] !== '') && ($_POST['item-size'] !== '')) {
+   if (($_POST['item_ID'] !== '') && ($_POST['item_size'] !== '')) {
         $bought_item_id = $_POST['item_ID'];
         $bought_item['name'] = $catalog[$bought_item_id]['name'];
         $bought_item['photo'] = $catalog[$bought_item_id]['photo'];
