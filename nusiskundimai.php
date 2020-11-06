@@ -1,9 +1,8 @@
 <?php
 $h1 = 'NUSISKUNDIMAI';
-var_dump($_POST);
 if (empty($_POST)) {
-        $text = 'nusiskundimai-display-none';
-        $form = 'nusiskundimai-display-flex';
+    $text = 'nusiskundimai-display-none';
+    $form = 'nusiskundimai-display-flex';
 } else {
     $name = $_POST['vardas'];
     $tank_you = "Jūsų skundas priimtas, dėkojame už pastabas pasistenksime patobulėti arba NE :D";
@@ -22,19 +21,21 @@ if (empty($_POST)) {
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="nusiskundimai-page-bg">
+<body>
 <header class="header">
     <nav class="nav-wrapper">
         <ul class="nav">
-            <li><img class="home-logo" src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/Erotic-Logo.jpg" alt="home"><a class="nav-links" href=""></a></li>
+            <li><img class="home-logo"
+                     src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/Erotic-Logo.jpg" alt="home"><a
+                        class="nav-links" href=""></a></li>
             <li><a class="nav-links" href="index.php">Katalogas</a></li>
             <li><a class="nav-links" href="surprise.php">Nustebink mane</a></li>
             <li><a class="nav-links" href="nusiskundimai.php">Nusiskundimai</a></li>
         </ul>
     </nav>
 </header>
-<article class="nusiskundimai-wrapper">
-    <main>
+<main class="nusiskundimai-page-bg">
+    <article class="nusiskundimai-wrapper">
         <h1 class="nusiskundimai-title"><?php print $h1 ?></h1>
         <section class="nusiskundimai-form-container <?php print $form ?>">
             <form class="nusiskundimai-form" method="POST">
@@ -50,7 +51,7 @@ if (empty($_POST)) {
             <h2><?php print $tank_you ?></h2>
             <p><?php print $_POST['text'] ?></p>
         </section>
-    </main>
-</article>
+    </article>
+</main>
 </body>
 </html>

@@ -26,6 +26,26 @@ img {
     height: auto;
 }
 
+.home-logo {
+    width: 100px;
+    height: 100px;
+}
+.nav-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+.header {
+    background-color: black;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    color: #ba0720;
+    font-size: 20px;
+}
 
 /*------------------------------------*\
      Nusiskundimai-page style
