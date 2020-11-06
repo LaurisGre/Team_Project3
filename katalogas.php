@@ -63,20 +63,11 @@ if(isset($_POST['submit'])) {
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="catalog">
-            <?php foreach ($catalog as $product_number => $product): ?>
-                <div class="catalog-product-card">
-                    <h3><?php print $product['name']; ?></h3>
-                    <img class="catalog-product-img" src="<?php print $product['photo']; ?>" alt="photo">
-                    <p class="catalog-product-number"><?php print $product_number; ?></p>
-                </div>
-            <?php endforeach; ?>
-        </section>
-        <section class="buy_box">
+    <main class="catalog-main">
+    <section class="buy-box">
             <?php if ($show_buy_form) : ?>
                 <h3>Pirkti!</h3>
-                <form class="buy_form" method="POST">
+                <form class="buy-form" method="POST">
                     <input type="number" name="item_ID" placeholder="Rinkis prekę"required>
                         <select name="item_size" id="item_size">
                             <option value="" disabled selected>Pasirink dydį</option>
@@ -84,7 +75,7 @@ if(isset($_POST['submit'])) {
                             <option value="2">2</option>
                             <option value="1">3</option>
                          </select>
-                    <input class="buy_button" type="submit" name="submit">
+                    <input class="buy-button" type="submit" name="submit">
                 </form>
             <?php else : ?>
                 <div class="catalog-product-card">
@@ -96,8 +87,16 @@ if(isset($_POST['submit'])) {
                     >
                 </div>
             <?php endif; ?>
-            </section>
-    
+        </section>
+        <section class="catalog">
+            <?php foreach ($catalog as $product_number => $product): ?>
+                <div class="catalog-product-card">
+                    <h3><?php print $product['name']; ?></h3>
+                    <img class="catalog-product-img" src="<?php print $product['photo']; ?>" alt="photo">
+                    <p class="catalog-product-number"><?php print $product_number; ?></p>
+                </div>
+            <?php endforeach; ?>
+        </section>
     </main>
 </body>
 </html>
