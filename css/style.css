@@ -129,6 +129,7 @@ body {
     padding: 5px;
     margin: 5px;
     align-items: center;
+    color: white;
 }
 .catalog-product-number{
     font-weight: bolder;
