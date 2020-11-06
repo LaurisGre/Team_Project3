@@ -39,9 +39,9 @@ $bought_item = [];
 
 if(isset($_POST['submit'])) {
     $show_buy_form = false;
-    $bought_item['ID'] = $_POST['item_ID'];
-    $bought_item['name'] = $product[$_POST['item_ID']]['name'];
-    $bought_item['photo'] = $product[$_POST['item_ID']]['photo'];
+    $bought_item_id = $_POST['item_ID'];
+    $bought_item['name'] = $catalog[$bought_item_id]['name'];
+    $bought_item['photo'] = $catalog[$bought_item_id]['photo'];
 }
 
 ?>
@@ -89,7 +89,7 @@ if(isset($_POST['submit'])) {
                         src="<?php print $bought_item['photo']; ?>"
                         alt="photo"
                     >
-                    <p><?php print $bought_item['ID']; ?></p>
+                    <p><?php print $bought_item_id; ?></p>
                 </div>
             <?php endif; ?>
             </section>
