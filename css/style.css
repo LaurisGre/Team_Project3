@@ -25,23 +25,31 @@ img {
     width: 100%;
     height: auto;
 }
+body{
+    background-color: black;
+    height: 100vh;
+}
 
 .home-logo {
     width: 100px;
     height: 100px;
 }
+
 .nav-wrapper {
     width: 80%;
     margin: 0 auto;
 }
+
 .header {
     background-color: black;
 }
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-links {
     color: #ba0720;
     font-size: 20px;
@@ -57,7 +65,7 @@ img {
 
 .nusiskundimai-page-bg {
     width: 100%;
-    height: auto;
+    height: 80%;
     background-image: url("https://hdwallsource.com/img/2014/11/erotic-wallpaper-25358-26040-hd-wallpapers.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,6 +74,7 @@ img {
 .nusiskundimai-title {
     font-size: 50px;
     color: white;
+    margin: 50px 0;
 }
 
 .nusiskundimai-form-container {
@@ -118,6 +127,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 20px;
     margin-top: 20px;
     width: 50%;
+    border: none;
     border-radius: 10px;
     outline: none;
     transition: 0.7s;
@@ -126,8 +136,8 @@ input[type=number]::-webkit-outer-spin-button {
 .nusiskundimai-form-button:hover {
     transition: 0.7s;
     transform: translateY(4px);
-    cursor:pointer;
-    background-color: darkred;
+    cursor: pointer;
+    background-color: #ba0720;
     color: white;
 }
 
@@ -137,4 +147,19 @@ input[type=number]::-webkit-outer-spin-button {
 
 .nusiskundimai-display-flex {
     display: flex;
+}
+.nusiskundimai-text-container{
+    width: 80%;
+    flex-direction: column;
+}
+.nusiskundimai-ty-text{
+    font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+.nusiskundimai-text{
+    font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+    color: white;
+    font-size: 15px;
+    margin-top: 50px;
 }

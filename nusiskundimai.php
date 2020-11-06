@@ -5,7 +5,8 @@ if (empty($_POST)) {
     $form = 'nusiskundimai-display-flex';
 } else {
     $name = $_POST['vardas'];
-    $tank_you = "Jūsų skundas priimtas, dėkojame už pastabas pasistenksime patobulėti arba NE :D";
+    $tank_you = "Jūsų skundas priimtas, dėkojame už pastabas pasistenksime patobulėti arba NE";
+
     $text = 'nusiskundimai-display-flex';
     $form = 'nusiskundimai-display-none';
 }
@@ -48,8 +49,8 @@ if (empty($_POST)) {
             </form>
         </section>
         <section class="nusiskundimai-text-container <?php print $text ?>">
-            <h2><?php print $tank_you ?></h2>
-            <p><?php print $_POST['text'] ?></p>
+            <h2 class="nusiskundimai-ty-text"><?php print $tank_you ?></h2>
+            <p class="nusiskundimai-text">Jūsų išsiūstas tekstas:<br> <?php print $_POST['text'] ?></p>
         </section>
     </article>
 </main>
