@@ -1,8 +1,12 @@
 <?php
 $show_buy_form = true;
+$bought_item = [];
 
 if(isset($_POST['submit'])) {
     $show_buy_form = false;
+    $bought_item['ID'] = $_POST['item_ID'];
+    $bought_item['name'] = $product[$_POST['item_ID']]['name'];
+    $bought_item['photo'] = $product[$_POST['item_ID']]['photo'];
 }
 
 ?>
@@ -27,9 +31,16 @@ if(isset($_POST['submit'])) {
                     <input class="buy_button" type="submit" name="submit">
                 </form>
             <?php else : ?>
-
+                <div class="catalog-product-card">
+                    <h3><?php print $bought_item['name']; ?></h3>
+                    <img
+                        class="catalog-product-img"
+                        src="<?php print $bought_item['photo']; ?>"
+                        alt="photo"
+                    >
+                    <p><?php print $bought_item['ID']; ?></p>
+                </div>
             <?php endif; ?>
-            
         </article>
     </main>
 </body>
