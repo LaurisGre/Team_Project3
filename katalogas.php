@@ -33,16 +33,31 @@ $catalog = [
         'photo' => 'https://external-preview.redd.it/6MNYmhB5VTRxRoy614EpLXV_ksijlZhIyqJW0M2_hws.jpg?auto=webp&s=ea2f7674c7b687a022b22d10964aed77684c7d7d',
     ],
 ];
-
+function validate_field_not_empty($field): bool{
+    if (empty($_POST[$field]) === '') {
+        return false;
+    } else return true;
+}
 $show_buy_form = true;
 $bought_item = [];
-
+$error = '';
 if(isset($_POST['submit'])) {
-    $show_buy_form = false;
-    $bought_item_id = $_POST['item_ID'];
-    $bought_item['name'] = $catalog[$bought_item_id]['name'];
-    $bought_item['photo'] = $catalog[$bought_item_id]['photo'];
+    
+    var_dump($_POST);
+   foreach ($_POST as $key => $item) {
+        if(validate_field_not_empty($item)){
+            $error = 'Palikti tušti laukai';
+        }
+   }
+   if (($_POST['item_ID'] !== '') && ($_POST['item-size'] !== '')) {
+        $bought_item_id = $_POST['item_ID'];
+        $bought_item['name'] = $catalog[$bought_item_id]['name'];
+        $bought_item['photo'] = $catalog[$bought_item_id]['photo'];
+        $show_buy_form = false;
+   }
+ 
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -68,14 +83,17 @@ if(isset($_POST['submit'])) {
             <?php if ($show_buy_form) : ?>
                 <h3>Pirkti!</h3>
                 <form class="buy-form" method="POST">
-                    <input type="number" name="item_ID" placeholder="Rinkis prekę"required>
+                    <input type="number" name="item_ID" placeholder="Rinkis prekę">
                         <select name="item_size" id="item_size">
-                            <option value="" disabled selected>Pasirink dydį</option>
+                            <option value=" ">Pasirink dydį</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="1">3</option>
                          </select>
                     <input class="buy-button" type="submit" name="submit">
+                    <p>
+                        <?php print $error; ?>
+                    </p>
                 </form>
             <?php else : ?>
                 <div class="catalog-product-card">
