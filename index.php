@@ -13,9 +13,9 @@
 <header class="header">
     <nav class="nav-wrapper">
         <ul class="nav">
-            <li><img class="home-logo"
-                     src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/Erotic-Logo.jpg" alt="home"><a
-                        class="nav-links" href="index.php"></a></li>
+            <li><a class="nav-links" href="index.php"><img class="home-logo"
+                                                           src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/Erotic-Logo.jpg"
+                                                           alt="home"></a></li>
             <li><a class="nav-links" href="katalogas.php">Katalogas</a></li>
             <li><a class="nav-links" href="surprise.php">Nustebink mane</a></li>
             <li><a class="nav-links" href="nusiskundimai.php">Nusiskundimai</a></li>
@@ -37,10 +37,14 @@
         </div>
         <div class="home-products">
             <article class="home-img">
-                <a href="katalogas.php"><img src="https://www.fantazijos.lt/Uploads/Shop/normal/6ec608d45bd3154ceda946c5759db45c.jpg" alt="photo"></a>
+                <a href="katalogas.php"><img
+                            src="https://www.fantazijos.lt/Uploads/Shop/normal/6ec608d45bd3154ceda946c5759db45c.jpg"
+                            alt="photo"></a>
             </article>
             <article class="home-img">
-                <a href="katalogas.php"><img src="https://www.fantazijos.lt/Uploads/Shop/normal/0b77dbc4284d1f4ba952f956be1ff91e.jpg" alt="photo"></a>
+                <a href="katalogas.php"><img
+                            src="https://www.fantazijos.lt/Uploads/Shop/normal/0b77dbc4284d1f4ba952f956be1ff91e.jpg"
+                            alt="photo"></a>
             </article>
         </div>
     </section>
